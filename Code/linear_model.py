@@ -110,7 +110,6 @@ class logRegL0(logReg):
                     continue
 
                 selected_new = selected | {i} # tentatively add feature "i" to the selected set
-                # TODO for Q2.3: Fit the model with 'i' added to the features,
                 # then compute the loss and update the minLoss/bestFeature
                 w = np.zeros(d)
                 w[list(selected_new)], _ = minimize(list(selected_new))
